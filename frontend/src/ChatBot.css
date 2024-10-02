@@ -1,0 +1,96 @@
+body {
+    background-color: #2b2b2b; /* Dark grey background for the entire page */
+    font-family: Arial, sans-serif; /* Clean font for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    margin: 0;
+    color: white; /* Default text color set to white */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 900px; /* Adjusted width */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color: #333333; /* Darker grey background for the chat container */
+}
+
+.chat-window {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto; /* Allows scrolling */
+    max-height: 450px; /* Adjust height as needed */
+}
+
+.chat-message {
+    margin: 8px 0;
+    padding: 10px 15px; /* Added more padding for better appearance */
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.5; /* Better readability */
+    max-width: 75%; /* Ensure bubbles don't take full width */
+    word-wrap: break-word; /* Break long words */
+}
+
+.chat-message.user {
+    align-self: flex-end; /* Align user messages to the right */
+    background-color: #007bff; /* User message background color */
+    color: white; /* User message text color */
+    border-bottom-right-radius: 0; /* Clean bubble effect */
+}
+
+.chat-message.bot {
+    align-self: flex-start; /* Align bot messages to the left */
+    background-color: #444; /* Darker background for bot messages */
+    color: white; /* Bot message text color */
+    border-bottom-left-radius: 0; /* Clean bubble effect */
+}
+
+.loading {
+    color: gray;
+    font-style: italic; /* Make loading text italic */
+    text-align: center; /* Center loading text */
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #555555; /* Border at the top of the input area */
+    background-color: #333333; /* Darker grey background for the input area */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555555; /* Light grey border */
+    border-radius: 20px; /* Rounded corners for the input */
+    font-size: 16px; /* Larger font size */
+    background-color: #2b2b2b; /* Dark grey input background */
+    color: white; /* Input text color */
+}
+
+.send-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 20px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.send-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 450px) {
+    .chat-container {
+        width: 90%; /* Make the container responsive */
+    }
+}

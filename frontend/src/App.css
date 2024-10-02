@@ -1,0 +1,19 @@
+.chat-message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 60%;
+  word-wrap: break-word; /* Break long words */
+}
+
+.chat-message.user {
+  background-color: #0056b3; /* Darker user message background color */
+  color: white; /* User message text color */
+  align-self: flex-end; /* Align user messages to the right */
+}
+
+.chat-message.bot {
+  background-color: #444; /* Darker background for bot messages */
+  color: white; /* Bot message text color */
+  align-self: flex-start; /* Align bot messages to the left */
+}
